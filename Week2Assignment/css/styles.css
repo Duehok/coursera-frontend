@@ -7,13 +7,25 @@ h1 {
     font-size: 175%;
 }
 
-h2 {
+.menu-item-title {
     font-size: 125%;
+    text-align: right;
+    margin: 0px;
+}
+
+.menu-item-title span {
+    border: 2px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* Simple Responsive Framework. */
 .row {
     width: 100%;
+}
+
+section {
+    border: 2px solid black;
 }
 
 /********** Large devices only **********/
