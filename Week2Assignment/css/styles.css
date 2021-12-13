@@ -7,6 +7,38 @@ h1 {
     font-size: 175%;
 }
 
+/*
+The menu item section take the whole columns it is set to
+the displayed item is in the section, recessed by a few pixels to 
+separate menu items from one another and has a border
+*/
+
+.menu-item {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-item div {
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+/*
+The menu item title is above the menu item text, in the top-right corner of the menu item box,
+with borders of the same thickness as those enclosing the menu 
+
+The menu item title is a heading and so is on its own line.
+the title's content is enclosed in a padded span with borders.
+The whole content of the heading is aligned to the right so the span is on the right too.
+The span has only borders on the left and bottom to avoid doubling the thickness
+where the encolsing div already has borders
+
+Ideally the border's thickness would be defined in a constant so that both the borders outside 
+the title and outside the whole menu item would be defined once and reused so that both borders 
+are always the same thickness, but CSS3 does not have constants
+*/
+
 .menu-item-title {
     font-size: 125%;
     text-align: right;
@@ -21,18 +53,12 @@ h1 {
     padding-right: 50px;
 }
 
-section {
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
+/*
+To help readability the menu item content has some margin form the title above and 
+the thick borders of the enclosing div
+*/
 
-section div {
-    border: 5px solid black;
-    border-radius: 5px;
-}
-
-section div p {
+.menu-item-content {
     margin: 10px 10px 10px 10px;
 }
 
