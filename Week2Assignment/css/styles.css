@@ -31,24 +31,30 @@ with borders of the same thickness as those enclosing the menu
 The menu item title is a heading and so is on its own line.
 the title's content is enclosed in a padded span with borders.
 The whole content of the heading is aligned to the right so the span is on the right too.
-The span has only borders on the left and bottom to avoid doubling the thickness
-where the encolsing div already has borders
+The title is offset by the brder's thickness to avoid doubling the border thickness
+where the encolsing div already has borders.
+
+Avoiding the double borders is theoretically possible by adding no offset and adding borders
+to the title only on the left and bottom
+But off-by-one errors in the browsers' rendering (chrome, edge) leave a 1px gap between 
+the title border and the enclosing border for some screen resolutions
 
 Ideally the border's thickness would be defined in a constant so that both the borders outside 
 the title and outside the whole menu item would be defined once and reused so that both borders 
-are always the same thickness, but CSS3 does not have constants
+are always the same thickness, but CSS3 does not seem to have constants
 */
 
 .menu-item-title {
+    position: relative;
     font-size: 125%;
     text-align: right;
     margin: 0px;
+    left: 5px; /*merge title border and enclosing border*/
 }
 
 .menu-item-title span {
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
-    border-bottom-left-radius: 5px;
+    border: 5px solid black;
+    border-radius: 5px;
     padding-left: 50px;
     padding-right: 50px;
 }
