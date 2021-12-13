@@ -2,9 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
 h1 {
     text-align: center;
     font-size: 175%;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 /*
@@ -20,8 +27,9 @@ separate menu items from one another and has a border
 }
 
 .menu-item div {
-    border: 5px solid black;
-    border-radius: 5px;
+    border: 1px solid black;
+    border-radius: 1px;
+    background-color: lightgrey;
 }
 
 /*
@@ -45,18 +53,17 @@ are always the same thickness, but CSS3 does not seem to have constants
 */
 
 .menu-item-title {
-    position: relative;
     font-size: 125%;
     text-align: right;
-    margin: 0px;
-    left: 5px; /*merge title border and enclosing border*/
+    margin: 0px; /*override default padding for h2*/
 }
 
 .menu-item-title span {
-    border: 5px solid black;
-    border-radius: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 0px 50px 0px 50px;
+    left: 1px; /*merge title border and enclosing border*/
 }
 
 /*
@@ -65,12 +72,28 @@ the thick borders of the enclosing div
 */
 
 .menu-item-content {
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
+}
+
+.poultry {
+    background-color: lightpink;
+}
+
+.cattle {
+    background-color: red;
+    color: white;
+}
+
+.fish {
+    background-color: lightyellow;
 }
 
 /* Simple Responsive Framework. */
 .row {
     width: 100%;
+    /*ensure equal blank space between screen side and content as between menu items*/
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
 /********** Large devices only **********/
