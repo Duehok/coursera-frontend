@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 175%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/*
+The menu item section take the whole columns it is set to
+the displayed item is in the section, recessed by a few pixels to 
+separate menu items from one another and has a border
+*/
+
+.menu-item {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-item div {
+    border: 1px solid black;
+    border-radius: 1px;
+    background-color: lightgrey;
+}
+
+/*
+The menu item title is above the menu item text, in the top-right corner of the menu item box,
+with borders of the same thickness as those enclosing the menu 
+
+The menu item title is a heading and so is on its own line.
+the title's content is enclosed in a padded span with borders.
+The whole content of the heading is aligned to the right so the span is on the right too.
+The title is offset by the brder's thickness to avoid doubling the border thickness
+where the encolsing div already has borders.
+
+Avoiding the double borders is theoretically possible by adding no offset and adding borders
+to the title only on the left and bottom
+But off-by-one errors in the browsers' rendering (chrome, edge) leave a 1px gap between 
+the title border and the enclosing border for some screen resolutions
+
+Ideally the border's thickness would be defined in a constant so that both the borders outside 
+the title and outside the whole menu item would be defined once and reused so that both borders 
+are always the same thickness, but CSS3 does not seem to have constants
+*/
+
+.menu-item-title {
+    font-size: 125%;
+    text-align: right;
+    margin: 0px; /*override default padding for h2*/
+}
+
+.menu-item-title span {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 0px 50px 0px 50px;
+    left: 1px; /*merge title border and enclosing border*/
+}
+
+/*
+To help readability the menu item content has some margin form the title above and 
+the thick borders of the enclosing div
+*/
+
+.menu-item-content {
+    margin: 10px;
+}
+
+.poultry {
+    background-color: lightpink;
+}
+
+.cattle {
+    background-color: red;
+    color: white;
+}
+
+.fish {
+    background-color: lightyellow;
+}
+
+/* Simple Responsive Framework. */
+.row {
+    width: 100%;
+    /*ensure equal blank space between screen side and content as between menu items*/
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+        float: left;
+    }
+
+    .col-lg-1 {
+        width: 8.33%;
+    }
+
+    .col-lg-2 {
+        width: 16.66%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.33%;
+    }
+
+    .col-lg-8 {
+        width: 66.66%;
+    }
+
+    .col-lg-9 {
+        width: 74.99%;
+    }
+
+    .col-lg-10 {
+        width: 83.33%;
+    }
+
+    .col-lg-11 {
+        width: 91.66%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: left;
+    }
+
+    .col-md-1 {
+        width: 8.33%;
+    }
+
+    .col-md-2 {
+        width: 16.66%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-4 {
+        width: 33.33%;
+    }
+
+    .col-md-5 {
+        width: 41.66%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-7 {
+        width: 58.33%;
+    }
+
+    .col-md-8 {
+        width: 66.66%;
+    }
+
+    .col-md-9 {
+        width: 74.99%;
+    }
+
+    .col-md-10 {
+        width: 83.33%;
+    }
+
+    .col-md-11 {
+        width: 91.66%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+}
