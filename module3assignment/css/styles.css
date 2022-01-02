@@ -1,6 +1,7 @@
 #header-nav {
     background-color: blanchedalmond;
 }
+
 #header-nav .container {
     margin-left: 10px ;
     margin-right: 10px;
@@ -8,17 +9,9 @@
     padding-right: 0px;
 }
 
-.padder {
-    background-color: lightgrey;
-    padding: 10px;
-}
-
-section {
-    margin-top: 10px;
-}
-.navbar-nav li {
-    background-color: lightskyblue;
-    border-bottom: 2px solid black ;
+.navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .navbar-nav {
@@ -26,7 +19,16 @@ section {
     border-top: 2px solid black;
 }
 
-.navbar-collapse {
-    padding-right: 0px;
-    padding-left: 0px;
+.navbar-nav li {
+    background-color: lightskyblue;
+    border-bottom: 2px solid black ;
+}
+
+section {
+    margin-top: 10px;
+}
+
+.padder {
+    background-color: lightgrey;
+    padding: 10px;
 }
